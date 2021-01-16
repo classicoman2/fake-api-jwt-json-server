@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const jsonServer = require("json-server");
 const jwt = require("jsonwebtoken");
 
-const server = jsonServer.create();
+const app = jsonServer.create();
 
 // Route Database
 const router = jsonServer.router("./db.json");
@@ -12,10 +12,10 @@ const router = jsonServer.router("./db.json");
 const userdb = JSON.parse(fs.readFileSync("./users.json", "UTF-8"));
 
 // Body Parser
-server.use(bodyParser.urlencoded({ extended: true }));
-server.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-server.use(jsonServer.defaults());
+app.use(jsonServer.defaults());
 
 const SECRET_KEY = "123456789";
 
@@ -43,7 +43,7 @@ function isAuthenticated(email, password) {
 }
 
 // Register New User
-server.post("/auth/register", (req, res) => {
+app.post("/auth/register", (req, res) => {
   console.log("register endpoint called; request body:", req.body);
   const { email, password } = req.body;
 
@@ -93,7 +93,7 @@ server.post("/auth/register", (req, res) => {
 
 
 // Login
-server.get("/auth/login", (req, res) => {
+app.get("/auth/login", (req, res) => {
   
   // Get authorization header -> el token
   let codi = req.headers.authorization.split(" ")[1]
@@ -126,7 +126,7 @@ server.get("/auth/login", (req, res) => {
 
 // it can't start with  /auth
 // xtoni Is ? useful?
-server.use(/^(?!\/auth).*$/, (req, res, next) => {
+app.use(/^(?!\/auth).*$/, (req, res, next) => {
   if (
     req.headers.authorization === undefined ||
     req.headers.authorization.split(" ")[0] !== "Bearer"
@@ -154,8 +154,8 @@ server.use(/^(?!\/auth).*$/, (req, res, next) => {
   }
 });
 
-server.use(router);
+app.use(router);
 
-server.listen(8000, () => {
+app.listen(process.env.PORT||3000, () => {
   console.log("Run Auth API Server");
 });

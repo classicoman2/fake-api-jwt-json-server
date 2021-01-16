@@ -1,8 +1,9 @@
 {
   "description": "Fake API for registering, authentification and authorisation",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node ./bin/www",  
+    "start-serv": "node app",
+    "dev": "nodemon app.js"
   },
   "license": "MIT",
   "dependencies": {
