@@ -117,11 +117,9 @@ server.get("/auth/login", (req, res) => {
   res.status(200).json({ access_token });
 });
 
-
 // it can't start with  /auth
 // xtoni Is ? useful?
 server.use(/^(?!\/auth).*$/, (req, res, next) => {
-
   if (req.headers.authorization === undefined || req.headers.authorization.split(" ")[0] !== "Bearer") {
     const status = 401;
     const message = "Error in authorization format";
@@ -150,4 +148,6 @@ server.use(router);
 
 server.listen(3001, () => {
   console.log("Run Auth API Server");
+  console.log("");
+  console.log("   http://localhost:3001");
 });
