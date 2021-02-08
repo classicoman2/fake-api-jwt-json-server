@@ -11,7 +11,7 @@ const expiresIn = "1h";
 const server = jsonServer.create();
 
 // Route Database
-const router = jsonServer.router("db/personatges.json");
+const router = jsonServer.router("db/characters.json");
 
 // Open users file
 const userdb = JSON.parse(fs.readFileSync("db/users.json", "UTF-8"));
@@ -67,7 +67,7 @@ server.post("/auth/register", (req, res) => {
     var last_item_id = data.users[data.users.length - 1].id;
     //Add new user
     data.users.push({ id: last_item_id + 1, email: email, password: password }); //add some data
-    var writeData = fs.writeFile("./users.json", JSON.stringify(data), (err, result) => {
+    var writeData = fs.writeFile("./db/users.json", JSON.stringify(data), (err, result) => {
       // WRITE
       if (err) {
         const status = 401;
