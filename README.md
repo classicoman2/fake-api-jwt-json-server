@@ -39,20 +39,14 @@ $ npm audit fix
 ```
 
 ## Run 
-```bash
-$ npm start
-```
-
-added dev mode:
 
 ```bash
 $ npm run dev
 ```
 
-## How to register?
+## How to Register?
 You can register by sending a POST request to
 ```
-POST http://localhost:3001/auth/login
 POST http://localhost:3001/auth/register
 ```
 
@@ -79,11 +73,21 @@ with the following data in body (basic example)
 }
 ```
 
-## How to access the API?
-To access the API, send the authorization token (Bearer) with any request to the protected endpoints,
+## How to access the data of the API (characters resource)?
+
+Els _characters_ estan disponibles a la url:
+```
+http://localhost:3001/characters
+```
+
+Però necessitam el _Token_ (Bearer) generat amb el Registre o el Login per poder recuperar la informació
+
 ```
 Authorization: Bearer <ACCESS_TOKEN>
 ```
+
+En cas contrari, es produirà un error.
+
 
 ## Webgraphy
 Check out these tutorials:
