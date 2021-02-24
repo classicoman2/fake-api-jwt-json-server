@@ -68,7 +68,8 @@ with the following data in body (basic example)
 ## How to Login?
 You can login by sending a GET request to
 ```
-POST http://localhost:3001/auth/login
+http://localhost:3001/auth/login
+```
 
 - Use `Basic Auth` to send username and password in the headers. You should receive an access token with the following format:
 ```json
