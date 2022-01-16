@@ -1,0 +1,52 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Tomeu Scrack",
+      "motto": "Right now, I'm letting you live. And I'll continue to keep you alive... until you've grown enough to become worth killing.",
+      "img": "https://raw.githubusercontent.com/classicoman2/fakeRESTserver/master/assets/image1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Miki Barcolicus",
+      "motto": "Electricity doesn't hurt me. When I said it doesn't hurt me, it means I can bare it. None the less, I feel the pain. That's why I'm a bit annoyed...",
+      "img": "https://raw.githubusercontent.com/classicoman2/fakeRESTserver/master/assets/image2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Tonina Constructor",
+      "motto": "I do not fear death. I fear only that my rage will fade over time.",
+      "img": "https://raw.githubusercontent.com/classicoman2/fakeRESTserver/master/assets/image3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Olivia Riudavets",
+      "motto": "If you wanna stop this, then stand up! Because I've just got one thing to say to you! Never forget who you want to become!",
+      "img": "https://raw.githubusercontent.com/classicoman2/fakeRESTserver/master/assets/image4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "John Kuhn Tagomago",
+      "motto": "100 push-ups, 100 sit-ups, 100 squats, and a 10km run EVERY SINGLE DAY!!!",
+      "img": "https://raw.githubusercontent.com/classicoman2/fakeRESTserver/master/assets/image5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Vincent Van der Grosse",
+      "motto": "When I heard that they were after my buddy...I couldn't do anything!! I didn't do anything!! If I don't act now...forget being a hero, I'm not even a man!",
+      "img": "https://raw.githubusercontent.com/classicoman2/fakeRESTserver/master/assets/image6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Tom Slaughterhouse",
+      "motto": "I'm sorry to tell you... that for the next three years... U.A. will run you through the wringer. Use your strength to overcome it all. So bring it",
+      "img": "https://raw.githubusercontent.com/classicoman2/fakeRESTserver/master/assets/image7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Jordi Sanostren",
+      "motto": "I'm not gonna be your worthless punching bag Deku forever... Kacchan. I'm... I'm the Deku who always does his best!",
+      "img": "https://raw.githubusercontent.com/classicoman2/fakeRESTserver/master/assets/image8.jpg"
+    }
+  ]
+}
