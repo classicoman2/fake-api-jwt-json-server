@@ -31,7 +31,7 @@ function createToken(payload) {
 
 // Verify the token
 function verifyToken(token) {
-  return jwt.verify(token, process.env.SECRET_KEY, (err, decode) => (decode !== undefined ? decode : err));
+  return jwt.verify(token, SECRET_KEY, (err, decode) => (decode !== undefined ? decode : err));
 }
 
 // Check if the user exists in database
