@@ -22,9 +22,11 @@ server.use(bodyParser.json());
 
 server.use(jsonServer.defaults());
 
+
+const SECRET_KEY = '12345678'
 // Create a token from a payload
 function createToken(payload) {
-  return jwt.sign(payload, process.env.SECRET_KEY, { expiresIn });
+  return jwt.sign(payload, SECRET_KEY, { expiresIn });
 }
 
 // Verify the token
