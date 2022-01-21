@@ -11,7 +11,7 @@ const expiresIn = "1h";
 const server = jsonServer.create();
 
 // Route Database
-const router = jsonServer.router("db/characters.json");
+const router = jsonServer.router("db/auth.json");
 
 // Open users file
 const userdb = JSON.parse(fs.readFileSync("db/users.json", "UTF-8"));
